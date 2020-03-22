@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage":"https://HassanKhan123.github.io/portfolio-website",
+  "scripts": {    
+    "deploy":"gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HassanKhan123/portfolio-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HassanKhan123/portfolio-website/issues"
+  },
+  
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
