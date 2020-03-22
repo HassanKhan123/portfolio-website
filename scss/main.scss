@@ -1,0 +1,226 @@
+@import "config";
+@import "menu";
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  @include background;
+  background-color: $primary-color;
+  color: set-text-color($primary-color);
+  height: 100%;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+  &.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background-color: rgba(lighten($primary-color, 2), 0.5);
+  }
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+
+  .icons {
+    margin-top: 1rem;
+    a {
+      padding: 0.4rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
+    }
+  }
+
+  &#home {
+    overflow: hidden;
+    h1 {
+      margin-top: 20vh;
+    }
+  }
+}
+
+.about-info {
+  display: grid;
+  //   grid-gap:30px;
+  grid-template-areas:
+    "bio-image bio bio"
+    "exp exp exp"
+    "job1 job1 job1"
+    "educate educate educate"
+    "edu1 edu2 edu3"
+    "webEdu webEdu webEdu"
+    "web-edu web-edu web-edu";
+
+  grid-template-columns: repeat(3, 1fr);
+  .bio-image {
+    grid-area: bio-image;
+    margin: auto;
+    border-radius: 50%;
+    border: 3px solid $secondary-color;
+  }
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .experience {
+    grid-area: exp;
+    margin-top: 2rem;
+  }
+  .educate {
+    grid-area: educate;
+    margin-top: 2rem;
+  }
+  .webEdu {
+    grid-area: webEdu;
+    margin-top: 2rem;
+  }
+
+  .web-edu {
+    grid-area: web-edu;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .edu-1 {
+    grid-area: edu1;
+  }
+  .edu-2 {
+    grid-area: edu2;
+  }
+  .edu-3 {
+    grid-area: edu3;
+  }
+  // .experience{
+
+  //     width: 200%;
+  // }
+  // .educate{
+
+  //     width: 200%;
+  // }
+  .job,
+  .education,
+  .web-education {
+    background-color: lighten($color: $primary-color, $amount: 5);
+    margin-left: 30px;
+    margin-top: 20px;
+    padding: 0.5rem;
+    border-bottom: 5px solid $secondary-color;
+  }
+}
+
+.projects{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    .item{
+        margin-left: 20px;
+    }
+    img{
+        width: 100%;
+        border:3px solid #fff;
+        &:hover{
+            opacity: 0.5;
+            border-color: $secondary-color;
+            @include easeOut
+        }
+    }
+}
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top:1rem;
+
+    div{
+        font-size: 2rem;
+        border:3px solid #fff;
+        padding: 1.5rem 2.5rem;
+        margin-bottom: 3rem;
+        @include easeOut;
+        &:hover{
+            padding: 0.5rem 1.5rem;
+            background-color: $secondary-color;
+            color:set-text-color($secondary-color);
+            span{
+                color:set-text-color($secondary-color);
+            }
+        }
+    }
+}
+
+.btn{
+    display: block;
+    padding: 0.5rem 1rem;
+    border:0;
+    margin-bottom: 0.3rem;
+
+    &:hover{
+        background-color: $secondary-color;
+        color:set-text-color($secondary-color)
+    }
+}
+
+.btn-dark{
+    @extend .btn;
+    background-color: darken($color: $primary-color, $amount: 50);
+    color:#fff
+}
+
+.btn-light{
+    @extend .btn;
+    background-color: lighten($color: $primary-color, $amount: 50);
+    color:#333
+}
+
+
+#main-footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: darken($color: $primary-color, $amount: 10);
+    color:set-text-color($primary-color);
+    height:60px
+}
+
+@import "mobile";
