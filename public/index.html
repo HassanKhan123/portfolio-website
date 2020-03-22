@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./src/main.css" />
   </head>
   <body id="bg-img">
     
@@ -25,13 +25,13 @@
             <a href="./index.html" class="nav-link">HOME</a>
           </li>
           <li class="nav-item">
-            <a href="./about.html" class="nav-link">ABOUT ME</a>
+            <a href="./src/about.html" class="nav-link">ABOUT ME</a>
           </li>
           <li class="nav-item">
-            <a href="./work.html" class="nav-link">MY WORK</a>
+            <a href="./src/work.html" class="nav-link">MY WORK</a>
           </li>
           <li class="nav-item">
-            <a href="./contact.html" class="nav-link">HOW TO REACH ME</a>
+            <a href="./src/contact.html" class="nav-link">HOW TO REACH ME</a>
           </li>
         </ul>
       </nav>
@@ -60,6 +60,26 @@
       </div>
     </main>
 
-    <script src="main.js"></script>
+    <script src="./src/main.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAm7SgiI2siKrBDskQ1gPS-Y9br1PNPHAc",
+    authDomain: "hassankhan-portfolio.firebaseapp.com",
+    databaseURL: "https://hassankhan-portfolio.firebaseio.com",
+    projectId: "hassankhan-portfolio",
+    storageBucket: "hassankhan-portfolio.appspot.com",
+    messagingSenderId: "123678318382",
+    appId: "1:123678318382:web:7993b6a327715da26b64bf"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
   </body>
 </html>
