@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage":"https://hassankhan123.github.io/portfolio-website",
-  "scripts": {    
-    "deploy":"gh-pages -d dist"
+  "homepage": "https://hassankhan123.github.io/portfolio-website",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,7 +16,6 @@
   "bugs": {
     "url": "https://github.com/HassanKhan123/portfolio-website/issues"
   },
-  
   "dependencies": {
     "gh-pages": "^2.2.0"
   }
